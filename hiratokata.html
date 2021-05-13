@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PRACTICE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- CSS | RESET -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- CSS | SYTLE -->
+</head>
+
+<body>
+
+  <p class="text">わたしをあいし、<br>あなたをあいする。</p>
+  <p id="transtext"></p>
+
+  <script type="text/javascript">
+    'use strict';
+
+    // 文字列を取得
+    const str = document.getElementsByClassName('text');
+
+    // HTMLcollectionから文字列、文字列長を取得
+    const string = str[0].innerText;
+    const stringlength = string.length;
+
+    // 空配列を用意
+    let stringarray = [];
+
+    // 返還後の文字列を格納する配列も用意
+    let transstringarray = [];
+
+    // 空配列に1文字ずつ文字を格納する
+    for (let i = 0; i < stringlength; i++) {
+      stringarray.push(string.slice(i, i + 1));
+    }
+
+    // 格納した文字を一文字ずつ加工する
+    for (let i of stringarray) {
+
+      // 句読点、スペース改行を除く
+      if (i != '、' && i != '。' && i !=" " && i != '　' && i != '\n' && i != '\r') {
+
+        // 文字コードを取得し、ひらがながカタカナになるように96を足す
+        i = (i.charCodeAt(0) + 96);
+
+        // 文字コードを文字に変換
+        i = String.fromCodePoint(i);
+
+      }
+
+      // 加工した文字を配列に格納する
+      transstringarray.push(i);
+    }
+
+    // 配列を連結して文字列へ
+    const transstring = transstringarray.join('');
+
+    // 文字をHTMLへ出力
+    let transtext = document.getElementById('transtext');
+    transtext.insertAdjacentHTML('afterbegin', transstring);
+
+  </script>
+</body>
+
+</html>
