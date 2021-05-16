@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="queue.js"></script>
+    <script>
+      'use strict';
+
+      let gohan = new Queue();
+
+      gohan.deQueue();
+
+      gohan.enQueue('1: カレー');
+      gohan.enQueue('2: ラーメン');
+      gohan.enQueue('3: うどん');
+
+      gohan.enQueue('4: こんぶ');
+      gohan.enQueue('5: スパゲティ');
+      gohan.enQueue('6: きしめん');
+
+      gohan.enQueue('7: そば');
+      gohan.enQueue('8: カレーうどん');
+      gohan.enQueue('9: チョコそば');
+
+      gohan.enQueue('10: カルボナーラ');
+
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+
+      gohan.altSize();
+
+      gohan.enQueue('11: ボンゴレビアンコ');
+      gohan.enQueue('12: 梨');
+
+      gohan.deQueue();
+      gohan.deQueue();
+
+      gohan.altSize();
+
+      gohan.enQueue('13: みそラーメン');
+      gohan.enQueue('14: しょうゆラーメン');
+      gohan.enQueue('15: しおラーメン');
+
+      gohan.altSize();
+
+      gohan.realSize();
+
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+      gohan.deQueue();
+
+      gohan.altSize();
+
+
+    </script>
+  </body>
+</html>
