@@ -19,3 +19,14 @@ console.log(array); // 0, 1, 2, 3
 
 array.shift(); // 配列の先頭からアイテムを出す
 console.log(array); // 1, 2, 3
+
+
+array.forEach(function(item, index){ // 第一引数にアイテム、第二引数にindexを渡せる。
+  console.log(index + ' : ' + item);
+});
+
+const arrMap = array.map(item =>
+item * 2
+);
+
+console.log(arrMap);
