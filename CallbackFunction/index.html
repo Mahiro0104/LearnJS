@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      'use strict';
+
+      // てきとうな配列を用意。
+      const arr = ['いぬ', 'ねこ', 'くじら'];
+
+      console.log('forEachメソッドのコールバック関数は三つの引数を受け取っている。');
+      console.log('1. 配列内のアイテム  2. 1のindex  3. 配列全体');
+
+      // forEachメソッドを利用する。
+      // このとき、forEachメソッドで実行される関数こそが、コールバック関数。
+      arr.forEach((item, i, array) => {
+        console.log('インデックス＝' + i + '、アイテム＝' + item);
+
+        if (i === array.length - 1){
+          console.log(array);
+        }
+      });
+
+      // てきとうな関数を用意
+      function add(numA, numB){
+        return numA + numB;
+      }
+
+      // logメソッドで最終的に第一引数と第二引数の合計を返す関数addは、コールバック関数。
+      console.log(add(1, 2));
+
+    </script>
+  </body>
+</html>
