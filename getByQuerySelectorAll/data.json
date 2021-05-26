@@ -1,0 +1,17 @@
+[
+	{
+		"title" : "タイトル1",
+		"credit" : "クレジット1",
+		"voiceactor" : "声優1"
+	},
+	{
+		"title" : "タイトル2",
+		"credit" : "クレジット2",
+		"voiceactor" : "声優2"
+	},
+	{
+		"title" : "タイトル3",
+		"credit" : "クレジット3",
+		"voiceactor" : "声優3"
+	}
+]

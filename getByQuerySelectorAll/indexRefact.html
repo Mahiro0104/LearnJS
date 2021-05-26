@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="request" data-id="0">
+      <p class="child1"></p>
+      <p class="child2"></p>
+      <p class="child3"></p>
+      <p class="child3"></p>
+    </div>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript">
+      $.getJSON('object.json', function(data){
+        console.log(data["key"]);
+      });
+    </script>
+    <script type="text/javascript">
+      $.getJSON('data.json', function(data){
+        console.log(data[0]["title"]);
+      });
+    </script> -->
+    <script type="text/javascript" src="querySelectorAllRefact.js"></script>
+    <!-- <script type="text/javascript">
+    'use strict';
+
+    // 全てのリクエストを取得し、NodeListへ
+    const requestList = document.querySelectorAll('.request');
+
+    // 全てのリクエストに対して関数を実行
+    // ここはカプセル化したい
+    requestList.forEach(function(itemElement){
+      // キーを取得し、フィールドに保存
+      const idField = itemElement.dataset.id;
+
+      // 出力する場所を取得
+      const child1 = itemElement.querySelector('.child1');
+      const child2 = itemElement.querySelector('.child2');
+
+      // jsonからタイトルのデータをまとめて取得し、変数jsonObjectに代入
+      // getJSONメソッドはjquery本体がある位置からのディレクトリを指定
+      $.getJSON('data.json', function(jsonObject){
+        // これで1レコード分のオブジェクトが閲覧出来るはず。
+        console.log(jsonObject[idField]);
+
+        // このタイトルのレコードを格納する
+        const record = jsonObject[idField];
+
+        // レコードからデータを取得し、対応する場所に出力する
+        // child1.textContent = record["child1"]
+        // child2.textContent = record["child2"]
+        child1.textContent = record["title"]
+        child2.textContent = record["credit"]
+      });
+    });
+
+    </script> -->
+  </body>
+</html>

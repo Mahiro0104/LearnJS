@@ -1,0 +1,13 @@
+{
+  "key" : "data",
+  "arrayKey" : ["arraydata1", "arraydata2", "arraydata3"],
+  "objectKey" : [
+    {
+      "objectName" : "anyobject",
+      "objectArray" : [
+        "objectArrayData1",
+        "objectArrayData2"
+      ]
+    }
+  ]
+}
